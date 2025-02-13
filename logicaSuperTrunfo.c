@@ -11,6 +11,8 @@ int main() {
         float densidadeA01, densidadeA02;
         float percaptaA01, percaptaA02;
         int resultadopopulacao;
+        int opcao, resultadoarea, resultadopercapta;
+
 
         printf("Digite o código da primeira cidade a ser comparada:\n");
         scanf("%3s", codigoA01);
@@ -48,21 +50,62 @@ int main() {
         printf("\nOs dados da segunda carta são:\n");
         printf("\nCódigo: %3s\nNome: %s\nPopulaçao: %d\nÁrea: %.1f\nPIB: %.1f\nNúmero de pontos turísticos: %d\nDensidade demográfica(km2): %.1f\nPIB per capta: %.1f\n", codigoA02, nomeA02, populacaoA02, areaA02, pibA02, pontosA02, densidadeA02, percaptaA02);
 
+        printf("\nPara saber qual a cidade mais populosa digite 1");
+        printf("\nPara saber qual cidade é maior digite 2");
+        printf("\nPara saber qual cidade é mais rica digite 3");
+        printf("\nEscolha o que deseja comparar: ");
+        scanf("%d", &opcao);
+
+        switch (opcao){
+        
+            case 1:
         printf("\nA cidade mais populosa é: \n");
         if (populacaoA01 > populacaoA02){
             printf("a Primeira Cidade!\n");
             resultadopopulacao = populacaoA01 - populacaoA02;
             printf("e tem %d pessoas a mais do que a outra cidade.\n", resultadopopulacao);
         }
-        if (populacaoA01 < populacaoA02){
+        else if (populacaoA01 < populacaoA02){
             printf("a Segunda Cidade\n");
             resultadopopulacao = populacaoA02 - populacaoA01;
             printf("e tem %d pessoas a mais do que a outra cidade.\n", resultadopopulacao);
         }
-        if (populacaoA01 == populacaoA02){
+        else {
             printf("as duas cidades tem o mesmo número de habitantes!\n");
         }
-        
+            break;
+            case 2:
+        printf("\nA maior cidade é: \n");
+        if (areaA01 > areaA02){
+            printf("a Primeira Cidade!\n");
+            resultadoarea = areaA01 - areaA02;
+            printf("e tem %d pessoas a mais que a segunda cidade.\n", resultadoarea);
+        }
+        else if (areaA01 < areaA02){
+            printf("a Segunda Cidade!\n");
+            resultadoarea = areaA02 - areaA01;
+            printf("e tem %d pessoas a mais que a primeira cidade.\n", resultadoarea);
+        }
+        else {
+            printf("as duas cidades tem o mesmo número de pessoas.\n");
+        }
+            break;
+            case 3:
+        if (percaptaA01 > percaptaA02){
+            printf("A Primeira cidade!\n");
+            resultadopercapta = percaptaA01 - percaptaA02;
+            printf("e tem %d a mais de PIB per capta.", resultadopercapta);
+        }
+        else if (percaptaA01 < percaptaA02){
+            printf("A Segunda cidade!\n");
+            resultadopercapta = percaptaA02 - percaptaA01;
+            printf("e tem %d a mais de PIB per capta.", resultadopercapta);
+        }
+        else {
+            printf("as duas cidades tem o mesmo PIB per capta.\n");
+        }
+        break;
+    }
 
     return 0;
 }
