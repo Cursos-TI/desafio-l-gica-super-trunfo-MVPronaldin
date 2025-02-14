@@ -122,7 +122,30 @@ int main() {
             printf("\nA área da primeira cidade é: %.2f\n", areaA01);
             printf("A área da segunda cidade é: %.2f\n", areaA02);
             
+            populacaoA01 > populacaoA02 ? printf("\nA população da primeira cidade é maior ") : printf("\nA população da Segunda cidade é maior ");
+            areaA01 > areaA02 ? printf("e a área da primeira cidade é maior!\n") : printf("e a Área da segunda cidade é maior!\n");
             
+            break;
+            case 2:
+            printf("\nVocê escolheu PIB e Pontos Turísticos!\n");
+            printf("O PIB da primeira cidade é: %.2f\n", pibA01);
+            printf("O PIB da segunda cidade é: %.2f\n", pibA02);
+            printf("\nO número de pontos turísticos da primeira cidade é: %d\n", pontosA01);
+            printf("O número de pontos turísticos da segunda cidade é: %d\n", pontosA02);
+
+            pibA01 > pibA02 ? printf("\nO PIB da primeira cidade é maior ") : printf("\nO PIB da segunda cidade é maior ");
+            pontosA01 > pontosA02 ? printf("e o número de pontos turísticos da primeira cidade é maior.\n") : printf("e o número de pontos turísticos da segunda cidade é maior.\n");
+            
+            break;
+            case 3:
+            printf("\nVocê escolheu Densidade populacional e PIB per capta!\n");
+            printf("A Densidade Populacional da primeira cidade é: %.2f\n", densidadeA01);
+            printf("A Densidade Populacional da segunda cidade é: %.2f\n", densidadeA02);
+            printf("\nO PIB per capta da primeira cidade é: %d\n", percaptaA01);
+            printf("O PIB per capta da segunda cidade é: %d\n", percaptaA02);
+            
+            densidadeA01 > densidadeA02 ? printf("\nA densidade da primeira cidade é maior ") : printf("\nA densidade da segunda cidade é maior ");
+            percaptaA01 > percaptaA02 ? printf("e o pib per capta da primeira cidade é maior.\n") : printf("e o pib per capta da segunda cidade é maior.\n");
         }
 
 
