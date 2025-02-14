@@ -12,6 +12,7 @@ int main() {
         float percaptaA01, percaptaA02;
         int resultadopopulacao;
         int opcao, resultadoarea, resultadopercapta;
+        int comparacaodupla, areapop;
 
 
         printf("Digite o código da primeira cidade a ser comparada:\n");
@@ -49,7 +50,8 @@ int main() {
         printf("\nCódigo: %3s\nNome: %s\nPopulaçao: %d\nÁrea: %.1f\nPIB: %.1f\nNúmero de pontos turísticos: %d\nDensidade demográfica(km2): %.1f\nPIB per capta: %.1f\n", codigoA01, nomeA01, populacaoA01, areaA01, pibA01, pontosA01, densidadeA01, percaptaA01);
         printf("\nOs dados da segunda carta são:\n");
         printf("\nCódigo: %3s\nNome: %s\nPopulaçao: %d\nÁrea: %.1f\nPIB: %.1f\nNúmero de pontos turísticos: %d\nDensidade demográfica(km2): %.1f\nPIB per capta: %.1f\n", codigoA02, nomeA02, populacaoA02, areaA02, pibA02, pontosA02, densidadeA02, percaptaA02);
-
+        
+        /* //menu para a escolha de 1 só opção para comparar
         printf("\nPara saber qual a cidade mais populosa digite 1");
         printf("\nPara saber qual cidade é maior digite 2");
         printf("\nPara saber qual cidade é mais rica digite 3");
@@ -105,7 +107,25 @@ int main() {
             printf("as duas cidades tem o mesmo PIB per capta.\n");
         }
         break;
-    }
+    }*/
+        printf("\nO que você deseja comparar?\n");
+        printf("Digite 1 para População e Área.\n");
+        printf("Digite 2 para PIB e Pontos turísticos.\n");
+        printf("Digite 3 para Densidade Populacional e Pib Per Capta.\n");
+        scanf("%d", &comparacaodupla);
+
+        switch (comparacaodupla){
+            case 1:
+            printf("\nVocê escolheu População e Área!\n");
+            printf("A população da primeira cidade é: %d\n", populacaoA01);
+            printf("A população da segunda cidade é: %d\n", populacaoA02);
+            printf("\nA área da primeira cidade é: %.2f\n", areaA01);
+            printf("A área da segunda cidade é: %.2f\n", areaA02);
+            
+            
+        }
+
+
 
     return 0;
 }
