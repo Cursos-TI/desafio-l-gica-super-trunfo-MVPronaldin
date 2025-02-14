@@ -122,10 +122,22 @@ int main() {
             printf("\nA área da primeira cidade é: %.2f\n", areaA01);
             printf("A área da segunda cidade é: %.2f\n", areaA02);
             
-            populacaoA01 > populacaoA02 ? printf("\nA população da primeira cidade é maior ") : printf("\nA população da Segunda cidade é maior ");
-            areaA01 > areaA02 ? printf("e a área da primeira cidade é maior!\n") : printf("e a Área da segunda cidade é maior!\n");
-            
+            if (populacaoA01 != populacaoA02 && areaA01 != areaA02){
+                populacaoA01 > populacaoA02 ? printf("\nA população da primeira cidade é maior ") : printf("\nA população da Segunda cidade é maior ");
+                areaA01 > areaA02 ? printf("e a área da primeira cidade é maior!\n") : printf("e a Área da segunda cidade é maior!\n");
+            }
+            else if (populacaoA01 == populacaoA02 && areaA01 != areaA02){
+                printf("\nAs duas cidades tem o mesmo número de habitantes ");
+                areaA01 > areaA02 ? printf ("e a área da primeira cidade é maior.\n") : printf("e a área da segunda cidade é maior.\n");
+            }
+            else if (populacaoA01 != populacaoA02 && areaA01 == areaA02){
+                populacaoA01 > populacaoA02 ? printf("\nA população da primeira cidade é maior ") : printf("A população da segunda cidade é maior ");
+                printf("e as duas cidades tem o mesmo tamanho.\n");
+            } else{
+                printf("\nAs áreas e as populações das duas cidades são as mesmas!\n");
+            }
             break;
+
             case 2:
             printf("\nVocê escolheu PIB e Pontos Turísticos!\n");
             printf("O PIB da primeira cidade é: %.2f\n", pibA01);
@@ -133,10 +145,23 @@ int main() {
             printf("\nO número de pontos turísticos da primeira cidade é: %d\n", pontosA01);
             printf("O número de pontos turísticos da segunda cidade é: %d\n", pontosA02);
 
-            pibA01 > pibA02 ? printf("\nO PIB da primeira cidade é maior ") : printf("\nO PIB da segunda cidade é maior ");
-            pontosA01 > pontosA02 ? printf("e o número de pontos turísticos da primeira cidade é maior.\n") : printf("e o número de pontos turísticos da segunda cidade é maior.\n");
-            
+            if (pibA01 != pibA02 && pontosA01 != pontosA02){
+                pibA01 > pibA02 ? printf("\nO PIB da primeira cidade é maior ") : printf("\nO PIB da segunda cidade é maior ");
+                pontosA01 > pontosA02 ? printf("e o número de pontos turísticos da primeira cidade é maior.\n") : printf("e o número de pontos turísticos da segunda cidade é maior.\n");
+            }
+            else if (pibA01 == pibA02 && pontosA01 != pontosA02){
+                printf("O PIB das duas cidades é o mesmo ");
+                pontosA01 > pontosA02 ? printf("e o número de pontos turísticos da primeira cidade é maior.\n") : printf("e o número de pontos turísticos da segunda cidade é maior.\n");
+            }
+            else if (pibA01 != pibA02 && pontosA01 == pontosA02){
+                pibA01 > pibA02 ? printf("O PIB da primeira cidade é maior ") : printf("O PIB da segunda cidade é maior ");
+                printf("e o número de pontos turísticos das duas cidades é igual.\n");
+            }
+            else {
+                printf("O PIB e o número de pontos turísticos das duas cidades é igual.\n");
+            }
             break;
+
             case 3:
             printf("\nVocê escolheu Densidade populacional e PIB per capta!\n");
             printf("A Densidade Populacional da primeira cidade é: %.2f\n", densidadeA01);
@@ -144,9 +169,23 @@ int main() {
             printf("\nO PIB per capta da primeira cidade é: %d\n", percaptaA01);
             printf("O PIB per capta da segunda cidade é: %d\n", percaptaA02);
             
-            densidadeA01 > densidadeA02 ? printf("\nA densidade da primeira cidade é maior ") : printf("\nA densidade da segunda cidade é maior ");
-            percaptaA01 > percaptaA02 ? printf("e o pib per capta da primeira cidade é maior.\n") : printf("e o pib per capta da segunda cidade é maior.\n");
+            if (densidadeA01 != densidadeA02 && percaptaA01 != percaptaA02){
+                densidadeA01 > densidadeA02 ? printf("\nA densidade da primeira cidade é maior ") : printf("\nA densidade da segunda cidade é maior ");
+                percaptaA01 > percaptaA02 ? printf("e o pib per capta da primeira cidade é maior.\n") : printf("e o pib per capta da segunda cidade é maior.\n");
+            }
+            else if (densidadeA01 == densidadeA02 && percaptaA01 != percaptaA02){
+                printf("O PIB per capta das duas cidades é o mesmo ");
+                percaptaA01 > percaptaA02 ? printf("e o PIB per capta da primeira cidade é maior.\n") : printf("e o PIB per capta da segunda cidade é maior.\n");
+            }
+            else if (densidadeA01 != densidadeA02 && percaptaA01 == percaptaA02){
+                densidadeA01 > densidadeA02 ? printf("A densidade populacional da primeira cidade é maior ") : printf("A densidade populacional da segunda cidade é maior ");
+            }
+            else {
+                printf("As duas cidades tem a mesma densidade populacioal e o mesmo PIB per capta.\n");
+            }
+        
         }
+
 
 
 
