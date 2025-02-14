@@ -183,6 +183,11 @@ int main() {
             else {
                 printf("As duas cidades tem a mesma densidade populacioal e o mesmo PIB per capta.\n");
             }
+            break;
+            
+            default: {
+                printf("\nSelecione uma opção válida.\n");
+            }
         
         }
 
