@@ -51,7 +51,7 @@ int main() {
         printf("\nOs dados da segunda carta são:\n");
         printf("\nCódigo: %3s\nNome: %s\nPopulaçao: %d\nÁrea: %.1f\nPIB: %.1f\nNúmero de pontos turísticos: %d\nDensidade demográfica(km2): %.1f\nPIB per capta: %.1f\n", codigoA02, nomeA02, populacaoA02, areaA02, pibA02, pontosA02, densidadeA02, percaptaA02);
         
-        /* //menu para a escolha de 1 só opção para comparar
+        /* //menu para a escolha de 1 só opção para comparar!
         printf("\nPara saber qual a cidade mais populosa digite 1");
         printf("\nPara saber qual cidade é maior digite 2");
         printf("\nPara saber qual cidade é mais rica digite 3");
